@@ -40,7 +40,7 @@ resultado = texto.find('F')
 #------------------------------------------------------------------
 ##Replace - reemplazar, necesita parametros
 resultado = texto.replace("FEDERICO","todos")
-print(resultado)
+print(f'LINEA 43 {resultado}')
 resultado = texto.replace("E","XX")
 print(resultado)
 
