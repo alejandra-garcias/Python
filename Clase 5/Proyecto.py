@@ -1,7 +1,29 @@
 from random import *
 
 ##choice
-palabras = ["casa", "perro", "gato", "auto"]
+palabras = [
+    "python",
+    "programacion",
+    "computadora",
+    "desarrollo",
+    "aprendizaje",
+    "tecnologia",
+    "inteligencia",
+    "datos",
+    "algoritmo",
+    "ciclo",
+    "condicional",
+    "variable",
+    "funcion",
+    "diccionario",
+    "iteracion",
+    "clase",
+    "modulo",
+    "cadena",
+    "indice",
+    "metodo"
+]
+
 
 letras_correctas = []
 letras_incorrectas = []
