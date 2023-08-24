@@ -4,7 +4,7 @@ class Persona:
         self.apellido = apellido
     
 class Cliente(Persona):
-    def __init__(self, nombre, apellido,numero_cuenta,balance):
+    def __init__(self, nombre, apellido,numero_cuenta,balance=0 ):
         super().__init__(nombre, apellido)
         self.numero_cuenta = numero_cuenta
         self.balance = balance
@@ -25,7 +25,7 @@ class Cliente(Persona):
     def retirar(self):
         retiro = input('Cuanto dinero desea retirar?')
         retiro = int(retiro)
-        if self.balance > retiro:
+        if self.balance >= retiro:
             self.balance = self.balance - retiro
             print(f'{retiro} euros han sido retirados correctamente de su cuenta. Su nuevo balance es de {self.balance}')
         else:
@@ -38,9 +38,7 @@ def crear_cliente():
     nombre = input('Cual es tu nombre ')
     apellido = input('Cual es tu apellido ')
     numero_cuenta = input('Cual es tu numero de cuenta ')
-    balance = input('Cuanto dinero te gustaria ingresar? ')
-    balance = float(balance)
-    return Cliente(nombre, apellido,numero_cuenta,balance)
+    return Cliente(nombre, apellido,numero_cuenta)
 
 
 
@@ -48,7 +46,6 @@ def inicio(cliente):
     salir = False
     eleccion = 'x'
     cliente = crear_cliente()
-    balance = cliente.balance
     while not eleccion.isnumeric() or int(eleccion) not in range(1,4) or not salir:
         print(cliente.__str__())
         print('Elige una opcion:')
