@@ -1,0 +1,52 @@
+La biblioteca collections en Python proporciona una variedad de clases y métodos que extienden las capacidades de las estructuras de datos básicas. Aquí tienes un resumen de algunos de los métodos y clases más utilizados de la biblioteca collections, incluyendo defaultdict y Counter:
+
+defaultdict:
+defaultdict es una subclase de diccionario que permite especificar una función predeterminada para crear valores iniciales en caso de que una clave no exista en el diccionario. Esto evita la necesidad de comprobar y crear claves antes de asignar valores.
+Ejemplo de uso:
+
+python
+Copy code
+from collections import defaultdict
+
+d = defaultdict(int)  # Los valores iniciales se crearán como enteros (0 en este caso)
+d['a'] += 1
+print(d['a'])  # Salida: 1
+print(d['b'])  # Salida: 0 (se crea automáticamente con el valor predeterminado para int, que es 0)
+Counter:
+Counter es una clase que se utiliza para contar la frecuencia de elementos en una colección (como una lista o una cadena) y devuelve un diccionario donde las claves son los elementos y los valores son las frecuencias.
+Ejemplo de uso:
+
+python
+Copy code
+from collections import Counter
+
+c = Counter(['a', 'b', 'a', 'c', 'b', 'a'])
+print(c)  # Salida: Counter({'a': 3, 'b': 2, 'c': 1})
+print(c['a'])  # Salida: 3
+OrderedDict:
+OrderedDict es una subclase de diccionario que mantiene el orden de inserción de las claves. A diferencia de un diccionario estándar, donde el orden de las claves puede variar, OrderedDict mantiene el orden en el que se agregaron las claves.
+Ejemplo de uso:
+
+python
+Copy code
+from collections import OrderedDict
+
+d = OrderedDict()
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+print(d)  # Salida: OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+deque:
+deque es una clase que implementa una cola doble (double-ended queue), lo que permite la inserción y eliminación eficiente tanto al principio como al final de la cola. Es útil para implementar estructuras de datos como colas y pilas.
+Ejemplo de uso:
+
+python
+Copy code
+from collections import deque
+
+q = deque()
+q.append(1)  # Agregar al final
+q.appendleft(2)  # Agregar al principio
+q.pop()  # Eliminar y devolver el último elemento
+q.popleft()  # Eliminar y devolver el primer elemento
+Estos son solo algunos ejemplos de las clases y métodos ofrecidos por la biblioteca collections en Python. Hay más opciones disponibles que pueden ser muy útiles en diferentes situaciones para mejorar la eficiencia y funcionalidad de tus programas.
