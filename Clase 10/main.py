@@ -32,7 +32,7 @@ enemigo_x = []
 enemigo_y = []
 enemigo_x_cambio = []
 enemigo_y_cambio = []
-cantidad_enemigos = 4
+cantidad_enemigos = 10
 
 for e in range(cantidad_enemigos):
     img_enemigo.append(pygame.image.load("ovni.png"))

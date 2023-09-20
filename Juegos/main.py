@@ -35,7 +35,7 @@ for e in range(cantidad_enemigos):
     img_enemigo.append(pygame.image.load("me-gusta.png"))
     enemigo_x.append(random.randint(0,736))
     enemigo_y.append(random.randint(50,200))
-    enemigo_x_cambio.append( 0.2)
+    enemigo_x_cambio.append( 1)
     enemigo_y_cambio.append( 50)
 
 #bala
@@ -43,7 +43,7 @@ img_bala = pygame.image.load("flecha-de-cupido.png")
 bala_x = 0
 bala_y = 500
 bala_x_cambio = 0
-bala_y_cambio = 0.5
+bala_y_cambio = 1
 bala_visible = False
 
 #puntajes
