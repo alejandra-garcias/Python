@@ -10,9 +10,9 @@ nombres_empleados = []
 lista_empleados = os.listdir(ruta)
 
 for nombre in lista_empleados:
-    imagen_actual = cv2.imread(f'{ruta}\{nombre}')
+    imagen_actual = cv2.imread(f'{ruta}/{nombre}')
     mis_imagenes.append(imagen_actual)
-    nombres_empleados.append(os.path.split(nombre)[0])
+    nombres_empleados.append(os.path.splitext(nombre)[0])
 
 #codificar imagenes
 def codificar(imagenes):
