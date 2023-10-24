@@ -158,7 +158,7 @@ def pedir_cosas():
                 continue
             except:
                 hablar('Perdon, pero no tengo informacion actual sobre esa accion')
-        elif 'adios' in pedido:
+        elif 'adiós' in pedido:
             hablar('Muchas gracias, si necesitas cualquier cosa avisame')
             break
 
