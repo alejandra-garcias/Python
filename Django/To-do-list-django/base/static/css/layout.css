@@ -1,0 +1,93 @@
+:root {
+  --violeta: #b8a5c5;
+  --amarillo: #f2d49d;
+}
+::selection {
+  background-color: var(--amarillo);
+}
+a {
+  text-decoration: none;
+  color: var(--violeta);
+}
+h1 {
+  color: var(--violeta);
+}
+body {
+  background-image: url("/static/img/background.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+}
+.container {
+  margin-top: 10vh;
+  width: 70vw;
+  height: 70vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.button {
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid var(--violeta);
+  color: var(--violeta);
+  border-radius: 5px;
+}
+
+.button:hover {
+  border: 3px solid var(--amarillo);
+  color: var(--amarillo);
+}
+
+.icono {
+  width: 1.5rem;
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sub-contenido {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.usuario {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sub-usuario {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  gap: 1rem;
+  width: 11vw;
+}
+
+.count {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  width: 15vw;
+}
+.formularios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  box-shadow: 0px 0px 2px 2px var(--violeta);
+}

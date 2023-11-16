@@ -1,0 +1,10 @@
+{% extends 'base/layout.html'%} {% block content %}
+<div class="contenido">
+  <h1>Inicia sesion</h1>
+  <form method="POST">
+    {% csrf_token %} {{form.as_p}}
+    <input class="button" type="submit" value="Inicia sesion" />
+  </form>
+  <p>No tienes cuenta? <a href="{% url 'registro' %}">Registrate aqui</a></p>
+</div>
+{% endblock content %}

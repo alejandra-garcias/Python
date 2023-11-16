@@ -1,0 +1,10 @@
+{% extends 'base/layout.html'%} {% block content %}
+<div class="contenido">
+  <h1>Tareas</h1>
+  <a href="{% url 'tareas' %}">Volver</a>
+  <form method="POST" action="">
+    {% csrf_token %} {{form.as_p}}
+    <input class="button" type="submit" value="Crear" />
+  </form>
+</div>
+{% endblock content %}

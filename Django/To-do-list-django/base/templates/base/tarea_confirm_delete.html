@@ -1,0 +1,12 @@
+{% extends 'base/layout.html'%}
+{% block content %}
+<form method="POST">
+<div class="contenido">
+    <a href="{% url 'tareas' %}">Volver</a>
+    {% csrf_token %}
+    <p>Estas seguro de eliminar {{tarea}}</p>
+    <input class="button" type="submit" value="Eliminar">
+</form>
+</div>
+
+{% endblock content %}
